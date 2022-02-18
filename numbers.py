@@ -5,7 +5,7 @@ binary = 0b10
 #10 in binary = 2
 print(binary)
 # bin returns binary representation
-print(bin(100))
+print('this is binary for 10', bin(10))
 #hexadecimal numbers
 hexa = 0xf
 #15
@@ -48,3 +48,4 @@ print(round(PI))
 #absolute
 print(abs(PI))
 print(math.floor(PI))
+
