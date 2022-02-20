@@ -34,6 +34,8 @@ save_user(name=input(''), id=1)
 # global
 message = 'hello'
 print(message)
+
+
 def greet():
     # turns local into global
     global message
@@ -55,3 +57,19 @@ def multi(*numbers):
 print("start")
 print(multi(1, 2, 3))
 print("finish")
+
+print('enter number')
+
+
+def fizz_buzz(input):
+    if (input % 5 == 0) and (input % 3 == 0):
+        return 'fizzbuzz'
+    if input % 3 == 0:
+        return 'fizz'
+    if input % 5 == 0:
+        return 'buzz'
+    else:
+        print('nope', input, 'does not qualify')
+
+           
+print(fizz_buzz(int(input())))
