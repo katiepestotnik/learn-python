@@ -112,5 +112,75 @@ items = [
 # lambda function/anonymous don't need to make another function
 items.sort(key=lambda item: item[1])
 # items.sort(key=sort_item)
-
 print(items)
+
+# map
+products = [
+    ("Product1", 10),
+    ("Product2", 4),
+    ("Product3", 20)
+]
+prices = []
+for product in products:
+    prices.append(product[1])
+print(prices)
+
+# returns map object
+x = list(map(lambda product: product[1], products))
+# for product in x:
+#     print(product)
+print(x)
+
+# filter
+groceries = [
+    ("OJ", 5),
+    ("Bread", 4),
+    ("Shrimp", 10)
+]
+# returns filter object
+x = list(filter(lambda item: item[1] >= 5, groceries))
+
+# returns a list with any tuple that matches
+print(x)
+
+# can use instead of map and filter functions
+# list comprehensions / same as above shorter and cleaner
+print([item[1] for item in groceries])
+# get booleans for each 
+print([item[1] >= 5 for item in groceries])
+# get just the items that match expression
+print([item for item in groceries if item[1] >= 10])
+
+
+# zip function
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+# trying to get to combine lists
+[(1, 10), (2, 20), (3, 30)]
+
+print(list(zip("abc", list1, list2)))
+
+# stacks LIFO (last in first out)
+browsing_session = []
+browsing_session.append(1)
+browsing_session.append(2)
+browsing_session.append(3)
+print(browsing_session)
+last = browsing_session.pop()
+print(last)
+print(browsing_session)
+print("redirect", browsing_session[-1])
+if not browsing_session:
+    print('disable')
+    
+
+# queues FIFO first in first out
+from collections import deque
+q = deque([])
+q.append(1)
+q.append(2)
+q.append(3)
+q.popleft()
+print(q)
+if not q:
+    print('empty')
