@@ -83,3 +83,34 @@ print(alpha)
 alpha.clear()
 print(alpha)
 
+alpha = ['a', 'b', 'c']
+# find index if/in to prevent error if value doesn't exist
+if 'd' in alpha:
+    print(alpha.index('d'))
+# count occurances
+print(alpha.count('a'))
+
+
+sort = [3, 17, 88, 3, 5]
+# sort ascending order mutates original
+# sort.sort()
+# reverse by reverse parameter mutates original
+sort.sort(reverse=True)
+# return new list does not change original
+print(sorted(sort, reverse=True))
+print(sort)
+
+items = [
+    ("Product1", 10),
+    ("Product2", 4),
+    ("Product3", 20)
+]
+# function to sort only the numbers
+# def sort_item(item):
+#     return item[1]
+
+# lambda function/anonymous don't need to make another function
+items.sort(key=lambda item: item[1])
+# items.sort(key=sort_item)
+
+print(items)
