@@ -7,7 +7,9 @@ sentence = "This is a common interview question"
 listify = list(sentence)
 
 
-print(Counter(listify))
+count = Counter(listify)
+print(count)
+
 
 # answer is 'i' and '' both have 5
 example = "This is a common interview question"
@@ -19,10 +21,10 @@ for char in example:
     else:
         char_num[char] = 1
 
-pprint(char_num, width=1)
+# pprint(char_num, width=1)
 
 fixed = sorted(
     char_num.items(), 
     key=lambda kv: kv[1], reverse=True)
 
-print(fixed[0])
+# print(fixed[0])
