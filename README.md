@@ -6,4 +6,4 @@ keyboard shortcuts
 
 - move line of code up or down use: option up arrow or down arrow
 
-
+- copy line use: shift option down arrow
